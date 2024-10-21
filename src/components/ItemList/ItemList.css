@@ -1,0 +1,29 @@
+.item-list { list-style-type: none; padding: 0; }
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(248, 255, 255);
+    border: 2px solid rgb(224, 240, 240);
+    margin-bottom: 10px;
+    border-radius: 9px;
+}
+
+.edit-btn {
+    margin-right: 10px;
+    background-color: rgb(96, 96, 192);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background-color: rgb(224, 64, 64);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
