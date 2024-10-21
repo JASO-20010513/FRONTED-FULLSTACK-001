@@ -1,4 +1,7 @@
-.item-list { list-style-type: none; padding: 0; }
+.item-list {
+    list-style-type: none;
+    padding: 0;
+}
 
 .item {
     display: flex;

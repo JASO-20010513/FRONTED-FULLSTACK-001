@@ -4,7 +4,7 @@
     align-items: center;
     margin-bottom: 20px;
 }
-  
+
 .input-field {
     width: 960px;
     padding: 10px;
@@ -12,7 +12,7 @@
     border-radius: 9px;
     border: 2px solid rgb(192, 192, 192);
 }
-  
+
 .add-btn {
     padding: 10px 20px;
     background-color: rgb(64, 192, 128);
@@ -21,5 +21,21 @@
     border-radius: 9px;
     cursor: pointer;
 }
-  
-.add-btn:hover { background-color: rgb(64, 160, 96); }
+
+.add-btn:hover {
+    background-color: rgb(64, 160, 96);
+}
+
+.cancel-btn {
+    padding: 10px 20px;
+    background-color: rgb(224, 64, 64);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: rgb(192, 48, 48);
+}

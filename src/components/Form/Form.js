@@ -1,43 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Form.css';
 
-const Form = ({ addItem }) => {
+const Form = ({ addItem, editItem, currentItem, setCurrentItem }) => {
+    const [itemName, setItemName] = useState('');
 
-    const [newItem, setNewItem] = useState('');
+    useEffect(() => {
+        if (currentItem) {
+            setItemName(currentItem.name);
+        } else {
+            setItemName('');
+        }
+    }, [currentItem]);
 
     const handleSubmit = (e) => {
-
         e.preventDefault();
-
-        if (newItem) {
-
-            addItem(newItem);
-            setNewItem('');
-
+        if (currentItem) {
+            editItem({ ...currentItem, name: itemName });
+            setCurrentItem(null); // Reset current item to null after editing
+        } else {
+            addItem(itemName);
         }
-
+        setItemName(''); // Clear input field after submission
     };
 
     return (
-      
-        <form className="form-container" onSubmit={handleSubmit}>
-
+        <form onSubmit={handleSubmit} className="form-container">
             <input
                 type="text"
-                value={newItem}
-                placeholder="Add a new item"
-                onChange={(e) => setNewItem(e.target.value)}
+                value={itemName}
+                onChange={(e) => setItemName(e.target.value)}
                 className="input-field"
+                required
             />
-
             <button type="submit" className="add-btn">
-                Add Item
+                {currentItem ? 'Guardar Cambios' : 'Agregar Item'}
             </button>
-
         </form>
-
     );
-
 };
 
 export default Form;

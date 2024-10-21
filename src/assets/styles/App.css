@@ -8,3 +8,8 @@
 h1 {
     color: rgb(48, 64, 72);
 }
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
