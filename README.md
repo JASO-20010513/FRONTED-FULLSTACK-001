@@ -115,4 +115,3 @@ Esto generará una versión optimizada del proyecto en la carpeta build/, que es
 
 ## Licencia
 Este proyecto no tiene una licencia específica.
-
